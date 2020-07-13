@@ -29,6 +29,50 @@ function Parts() {
           name: "Feature's Name",
           controls: [
             { name: "control", dev: 0, devTol: 0, status: "ok" },
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+          ],
+        },
+        {
+          name: "Feature's Name",
+          controls: [
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+            { name: "control", dev: 0, devTol: 0, status: "warning" },
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+          ],
+        },
+        {
+          name: "Feature's Name",
+          controls: [
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+            { name: "control", dev: 0, devTol: 0, status: "warning" },
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+            { name: "control", dev: 0, devTol: 0, status: "warning" },
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+            { name: "control", dev: 0, devTol: 0, status: "warning" },
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+          ],
+        },
+        {
+          name: "Feature's Name",
+          controls: [
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+            { name: "control", dev: 0, devTol: 0, status: "warning" },
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+          ],
+        },
+        {
+          name: "Feature's Name",
+          controls: [
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
             { name: "control", dev: 0, devTol: 0, status: "warning" },
             { name: "control", dev: 0, devTol: 0, status: "ok" },
             { name: "control", dev: 0, devTol: 0, status: "ok" },

@@ -1,5 +1,5 @@
 .featureContainer{
-  width: 800px;
+    width:max-content;
 }
 
 .header {
@@ -21,11 +21,16 @@
 }
 
 .controlsTable{
-    margin:10px;
+    margin: 0px 10px;
+    border-spacing:20px
 }
 
 .holder{
     background-color:#E4E4E4;
+    height:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center
 }
 
 .title{
