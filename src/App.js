@@ -8,7 +8,7 @@ function App() {
     features: [
       {
         name: "Feature Name",
-        controls: [{ name: "control", dev: 0, devTol: 0, status: "error" }],
+        controls: [{ name: "control", dev: 0, devTol: 0, status: "ok" },{ name: "control", dev: 0, devTol: 0, status: "warning" },{ name: "control", dev: 0, devTol: 0, status: "error" },{ name: "control", dev: 0, devTol: 0, status: "ok" },{ name: "control", dev: 0, devTol: 0, status: "ok" }],
       },
     ],
   };

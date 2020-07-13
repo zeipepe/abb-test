@@ -1,9 +1,31 @@
-.ok{
-    background-color: green;
+.featureContainer{
+  width: 400px;
 }
-.warning{
-    background-color: yellow;
+
+.header {
+  text-align: left;
+  padding: 15px 0px;
+  color: white;
 }
-.error{
-    background-color:red;
+.header h3{
+  display: flex;
+  flex-flow: row;
+    margin:0px 20px;
+}
+.title{
+    margin:0px 20px;
+}
+.ok {
+  background-color: #329a5d;
+}
+.warning {
+  background-color: #e9c704;
+}
+.error {
+  background-color: #f62d3d;
+}
+.icon {
+  margin-left: auto;
+  margin-right: 0px;
+  vertical-align: middle;
 }
