@@ -1,3 +1,23 @@
+# ABB Frontend Assignment
+
+## Introduction
+
+Given the objective and the requirements I decided to bootstrap the application with Create React App and build on top of that. Because of the time constraints I started focusing on the front end, with the intent to mock a small node.js server as soon as the aesthetics are finished.
+
+### Roadmap
+
+[X] Set up React app.
+[ ] Create Part and Feature components focusing on aesthetics
+[ ] Mock data
+[ ] Add tests for component's logic
+[ ] Add component logic
+[ ] Create a custom View
+[ ] Add routing
+[ ] Add tests for communication with server
+[ ] Add tests for back end API
+[ ] Set up communication with back end
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
