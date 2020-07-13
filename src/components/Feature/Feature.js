@@ -13,7 +13,10 @@ const colors = {
 
 function FeatureHeader(props) {
   return (
-    <div className={cx(styles.header, styles[props.status])}>
+    <div
+      className={cx(styles.header, styles[props.status])}
+      data-testid="feature-header"
+    >
       <h3>
         <div className={styles.circle}>
           <FiCircle size="25px" />
@@ -30,10 +33,17 @@ function iconFromStatus(status, size = "23px", color = false) {
     case "error":
       return <BsXCircle size={size} color={color ? colors[status] : "white"} />;
     case "warning":
-      return <BsExclamationCircle size={size} color={color ? colors[status] : "white"} />;
+      return (
+        <BsExclamationCircle
+          size={size}
+          color={color ? colors[status] : "white"}
+        />
+      );
     case "ok":
     default:
-      return <BsCheckCircle size={size} color={color ? colors[status] : "white"} />;
+      return (
+        <BsCheckCircle size={size} color={color ? colors[status] : "white"} />
+      );
   }
 }
 
@@ -41,6 +51,7 @@ function Feature(props) {
   const { name, controls } = props;
   const [featureState, setFeatureState] = useState("ok");
   const [controlSections, setControlSections] = useState([]);
+  // Set Feature state on worst control status
   useEffect(() => {
     setFeatureState(
       controls.reduce((result, control) => {
@@ -55,6 +66,7 @@ function Feature(props) {
       }, "ok")
     );
   }, [controls]);
+  //limit rows to 12 as in design by splitting the controls array into chunks
   useEffect(() => {
     function chunkArray(array, size) {
       let result = [];
@@ -66,7 +78,7 @@ function Feature(props) {
     }
     setControlSections(chunkArray(controls, 12));
   }, [controls]);
-
+  //define space that feature will take on grid
   const featureGridArea = {
     gridArea:
       "auto / auto / span " +
@@ -74,7 +86,7 @@ function Feature(props) {
       " / span " +
       controlSections.length,
   };
-  
+
   return (
     <div className={styles.featureContainer} style={featureGridArea}>
       <FeatureHeader status={featureState}>{name.toUpperCase()}</FeatureHeader>
@@ -84,24 +96,36 @@ function Feature(props) {
             className={styles.controlsTable}
             key={"sectionControl-" + name + "-" + scIndex}
           >
-            <tr>
-              <th><div className={styles.alignLeft}>Control</div></th>
-              <th>Dev</th>
-              <th>Dev Out Tol</th>
-              <th></th>
-            </tr>
-            {sectionControls.map((control, cIndex) => (
-              <tr key={"control-" + name + "-" + control.name + cIndex}>
-                <td><div className={styles.alignLeft}>{control.name}</div></td>
-                <td>{control.dev}</td>
-                <td>{control.devTol}</td>
-                <td><div className={styles.shiftLeft}>{iconFromStatus(control.status, "15px", true)}</div></td>
+            <thead>
+              <tr>
+                <th>
+                  <div className={styles.alignLeft}>Control</div>
+                </th>
+                <th>Dev</th>
+                <th>Dev Out Tol</th>
+                <th></th>
               </tr>
-            ))}
+            </thead>
+            <tbody>
+              {sectionControls.map((control, cIndex) => (
+                <tr key={"control-" + name + "-" + control.name + cIndex}>
+                  <td>
+                    <div className={styles.alignLeft}>{control.name}</div>
+                  </td>
+                  <td>{control.dev}</td>
+                  <td>{control.devTol}</td>
+                  <td>
+                    <div className={styles.shiftLeft}>
+                      {iconFromStatus(control.status, "15px", true)}
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
           </table>
         ))}
       </div>
-      <div className={styles.holder}>
+      <div className={styles.holder} data-testid="feature-holder">
         <img height="25px" src={lineIcon} alt="draggable" />
       </div>
       <div></div>
