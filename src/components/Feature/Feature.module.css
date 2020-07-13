@@ -1,5 +1,4 @@
-.featureContainer{
-    width:max-content;
+.featureContainer {
 }
 
 .header {
@@ -8,33 +7,40 @@
   color: white;
 }
 
-.header h3{
+.header h3 {
   display: flex;
   flex-flow: row;
-    margin:0px 20px;
+  margin: 0px 20px;
+  height:25px;
+  line-height:25px;
+  font-size: 15px;
+  font-weight: 700;
 }
 
-.controlsContainer{
-    background-color:#D2D2D2;
-    display:flex;
-    flex-flow:row;
+.controlsContainer {
+  background-color: #d2d2d2;
+  display: flex;
+  flex-flow: row;
+  font-size: 15px;
+  font-weight: 300;
 }
 
-.controlsTable{
-    margin: 0px 10px;
-    border-spacing:20px
+.controlsTable {
+  margin: 0px 10px;
+  border-spacing: 20px 13px;
+  line-height:25px;
 }
 
-.holder{
-    background-color:#E4E4E4;
-    height:40px;
-    display:flex;
-    justify-content:center;
-    align-items:center
+.holder {
+  background-color: #e4e4e4;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.title{
-    margin:0px 20px;
+.title {
+  margin: 0px 20px;
 }
 
 .ok {
@@ -53,4 +59,13 @@
   margin-left: auto;
   margin-right: 0px;
   vertical-align: middle;
+}
+
+.shiftLeft {
+  position: relative;
+  left: -10px;
+}
+
+.alignLeft {
+  text-align:left;
 }

@@ -30,10 +30,10 @@ function iconFromStatus(status, size = "23px", color = false) {
     case "error":
       return <BsXCircle size={size} color={color ? colors[status] : "white"} />;
     case "warning":
-      return <BsXCircle size={size} color={color ? colors[status] : "white"} />;
+      return <BsExclamationCircle size={size} color={color ? colors[status] : "white"} />;
     case "ok":
     default:
-      return <BsXCircle size={size} color={color ? colors[status] : "white"} />;
+      return <BsCheckCircle size={size} color={color ? colors[status] : "white"} />;
   }
 }
 
@@ -85,17 +85,17 @@ function Feature(props) {
             key={"sectionControl-" + name + "-" + scIndex}
           >
             <tr>
-              <th>Control</th>
+              <th><div className={styles.alignLeft}>Control</div></th>
               <th>Dev</th>
               <th>Dev Out Tol</th>
               <th></th>
             </tr>
             {sectionControls.map((control, cIndex) => (
               <tr key={"control-" + name + "-" + control.name + cIndex}>
-                <td>{control.name}</td>
+                <td><div className={styles.alignLeft}>{control.name}</div></td>
                 <td>{control.dev}</td>
                 <td>{control.devTol}</td>
-                <td>{iconFromStatus(control.status, "15px", true)}</td>
+                <td><div className={styles.shiftLeft}>{iconFromStatus(control.status, "15px", true)}</div></td>
               </tr>
             ))}
           </table>
