@@ -1,5 +1,5 @@
 .featureContainer{
-  width: 400px;
+  width: 800px;
 }
 
 .header {
@@ -7,23 +7,43 @@
   padding: 15px 0px;
   color: white;
 }
+
 .header h3{
   display: flex;
   flex-flow: row;
     margin:0px 20px;
 }
+
+.controlsContainer{
+    background-color:#D2D2D2;
+    display:flex;
+    flex-flow:row;
+}
+
+.controlsTable{
+    margin:10px;
+}
+
+.holder{
+    background-color:#E4E4E4;
+}
+
 .title{
     margin:0px 20px;
 }
+
 .ok {
   background-color: #329a5d;
 }
+
 .warning {
   background-color: #e9c704;
 }
+
 .error {
   background-color: #f62d3d;
 }
+
 .icon {
   margin-left: auto;
   margin-right: 0px;

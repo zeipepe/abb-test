@@ -2,12 +2,15 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import {
-  BsCircle,
   BsExclamationCircle,
   BsXCircle,
   BsCheckCircle,
 } from "react-icons/bs";
+import {
+    FiCircle
+  } from "react-icons/fi";
 import styles from "./Feature.module.css";
+import lineIcon from "./line.svg"
 const colors={
     ok:"#329a5d",
   warning: "#e9c704",
@@ -19,7 +22,7 @@ function FeatureHeader(props) {
     <div className={cx(styles.header, styles[props.status])}>
       <h3>
         <div className={styles.circle}>
-          <BsCircle  size="25px"/>
+          <FiCircle  size="25px"/>
         </div>
         <div className={styles.title}>{props.children}</div>
         <div className={styles.icon}>{iconFromStatus(props.status)}</div>
@@ -28,7 +31,7 @@ function FeatureHeader(props) {
   );
 }
 
-function iconFromStatus(status,size = "25px", color=false) {
+function iconFromStatus(status,size = "23px", color=false) {
   switch (status) {
     case "error":
       return <BsXCircle  size={size} color={color?colors[status]:'white'} />;
@@ -77,7 +80,7 @@ function Feature(props) {
       <FeatureHeader status={featureState}>{name.toUpperCase()}</FeatureHeader>
       <div className={styles.controlsContainer}>
       {controlSections.map((sectionControls,scIndex)=>(
-          <table key={"sectionControl-"+name+"-"+scIndex}>
+          <table className={styles.controlsTable} key={"sectionControl-"+name+"-"+scIndex}>
               <tr>
                   <th>
                       Control
@@ -100,6 +103,10 @@ function Feature(props) {
                   ))}
           </table>
       ))}
+      </div>
+      <div className={styles.holder}><img height="25px" src={lineIcon} alt="draggable" /></div>
+      <div>
+
       </div>
     </div>
   );
