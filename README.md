@@ -19,6 +19,10 @@ Given the objective and the requirements I decided to bootstrap the application 
 - [ ] Set up communication with back end
 - [ ] Add drag and drop functionality
 
+
+From here on is the CRA readme with available commands
+----------------------------------------------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
