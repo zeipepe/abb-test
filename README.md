@@ -6,17 +6,18 @@ Given the objective and the requirements I decided to bootstrap the application 
 
 ### Roadmap
 
-[X] Set up React app.
-[ ] Create Part and Feature components focusing on aesthetics
-[ ] Mock data
-[ ] Add tests for component's logic
-[ ] Add component logic
-[ ] Create a custom View
-[ ] Add routing
-[ ] Add tests for communication with server
-[ ] Add tests for back end API
-[ ] Set up communication with back end
-[ ] Add drag and drop functionality
+- [X] Set up React app.
+- [X] Create Part and Feature components focusing on aesthetics
+- [X] Mock data
+- [X] Add tests for component's logic
+- [X] Add component logic
+- [X] Create a custom View
+- [ ] Add routing
+- [ ] Set up an express server as back end
+- [ ] Add tests for communication with server
+- [ ] Add tests for back end API
+- [ ] Set up communication with back end
+- [ ] Add drag and drop functionality
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
