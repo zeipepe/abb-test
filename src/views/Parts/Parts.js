@@ -2,121 +2,11 @@ import React, { useState, useEffect } from "react";
 import Part from "../../components/Part/Part";
 import styles from "./Parts.module.css";
 function Parts() {
-  // const parts = [
-  //   {
-  //     name: "Part A",
-  //     features: [
-  //       {
-  //         name: "Feature Name",
-  //         controls: [
-  //           { name: "X", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Y", dev: 0, devTol: 0, status: "warning" },
-  //           { name: "Z", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Diameter", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "X", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Y", dev: 0, devTol: 0, status: "warning" },
-  //           { name: "Z", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Diameter", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "X", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Y", dev: 0, devTol: 0, status: "warning" },
-  //           { name: "Z", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Diameter", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "X", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Y", dev: 0, devTol: 0, status: "warning" },
-  //           { name: "Z", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Diameter", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "X", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Y", dev: 0, devTol: 0, status: "warning" },
-  //           { name: "Z", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Diameter", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "X", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Y", dev: 0, devTol: 0, status: "warning" },
-  //           { name: "Z", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Diameter", dev: 0, devTol: 0, status: "ok" },
-  //         ],
-  //       },
-  //       {
-  //         name: "Feature's Name",
-  //         controls: [
-  //           { name: "X", dev: 0,status: "ok" },
-  //           { name: "Y", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Z", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Diameter", dev: 0, devTol: 0, status: "ok" },
-  //         ],
-  //       },
-  //       {
-  //         name: "Feature's Name",
-  //         controls: [
-  //           { name: "X", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Y", dev: 0, devTol: 0, status: "warning" },
-  //           { name: "Z", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Diameter", dev: 0, devTol: 0, status: "ok" },
-  //         ],
-  //       },
-  //       {
-  //         name: "Feature's Name",
-  //         controls: [
-  //           { name: "X", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Y", dev: 0, devTol: 0, status: "warning" },
-  //           { name: "Z", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Diameter", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "X", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Y", dev: 0, devTol: 0, status: "warning" },
-  //           { name: "Z", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Diameter", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "X", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Y", dev: 0, devTol: 0, status: "warning" },
-  //           { name: "Z", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Diameter", dev: 0, devTol: 0, status: "ok" },
-  //         ],
-  //       },
-  //       {
-  //         name: "Feature's Name",
-  //         controls: [
-  //           { name: "X", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Y", dev: 0, devTol: 0, status: "warning" },
-  //           { name: "Z", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Diameter", dev: 0, devTol: 0, status: "ok" },
-  //         ],
-  //       },
-  //       {
-  //         name: "Feature's Name",
-  //         controls: [
-  //           { name: "X", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Y", dev: 0, devTol: 0, status: "warning" },
-  //           { name: "Z", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "Diameter", dev: 0, devTol: 0, status: "ok" },
-  //         ],
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     name: "Part A",
-  //     features: [
-  //       {
-  //         name: "Feature Name",
-  //         controls: [
-  //           { name: "control", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "control", dev: 0, devTol: 0, status: "warning" },
-  //           { name: "control", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "control", dev: 0, devTol: 0, status: "ok" },
-  //         ],
-  //       },
-  //       {
-  //         name: "Feature Name",
-  //         controls: [
-  //           { name: "control", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "control", dev: 0, devTol: 0, status: "warning" },
-  //           { name: "control", dev: 0, devTol: 0, status: "ok" },
-  //           { name: "control", dev: 0, devTol: 0, status: "ok" },
-  //         ],
-  //       },
-  //     ],
-  //   },
-  // ];
 
   const [parts, setParts] = useState([]);
   useEffect(() => {
+    //Define constants inside the effect to avoid issues with dependencies
+    //tolerance for each type of control
     const tolerances = {
       X: 0.3,
       Y: 0.3,
@@ -124,7 +14,85 @@ function Parts() {
       Diameter: 0.4,
       Length: 0.2,
     };
-
+    // static base for the parts
+    const partsBase=[
+      {
+        name: "Part A",
+        features: [
+          {
+            name: "Seam",
+            controls: [
+              "X",
+              "Y",
+              "Z",
+              "Length",
+              "X",
+              "Y",
+              "Z",
+              "Length",
+              "X",
+              "Y",
+              "Z",
+              "Length",
+              "X",
+              "Y",
+              "Z",
+              "Length",
+              "X",
+              "Y",
+              "Z",
+              "Length",
+              "X",
+              "Y",
+              "Z",
+              "Length",
+            ],
+          },
+          { name: "Slot", controls: ["X", "Y", "Z", "Diameter"] },
+          { name: "Hole", controls: ["X", "Y", "Z", "Diameter"] },
+          { name: "Hole 2", controls: ["X", "Y", "Z", "Diameter","X", "Y", "Z", "Diameter","X", "Y", "Z", "Diameter"] },
+          { name: "Hole 3", controls: ["X", "Y", "Z", "Diameter"] },
+          { name: "Hole 4", controls: ["X", "Y", "Z", "Diameter"] },
+        ],
+      },
+      {
+        name: "Part B",
+        features: [
+          {
+            name: "Seam",
+            controls: [
+              "X",
+              "Y",
+              "Z",
+              "Length",
+              "X",
+              "Y",
+              "Z",
+              "Length",
+              "X",
+              "Y",
+              "Z",
+              "Length",
+              "X",
+              "Y",
+              "Z",
+              "Length",
+              "X",
+              "Y",
+              "Z",
+              "Length",
+              "X",
+              "Y",
+              "Z",
+              "Length",
+            ],
+          },
+          { name: "Slot", controls: ["X", "Y", "Z", "Diameter"] },
+          { name: "Hole 1", controls: ["X", "Y", "Z", "Diameter"] },
+        ],
+      },
+    ];
+    //generate mock data
     const generateParts = (partsBase) => {
       return partsBase.map((part) => ({
         ...part,
@@ -134,6 +102,7 @@ function Parts() {
             let control = { name: name };
             control.dev = (parseInt(Math.random() * 30)/100);
             control.devTol = Math.max(0, control.dev - tolerances[name]);
+            //Since I couldn't figure out when the yellow/warning status should be triggered I arbitrarily set it to deviation being higher than half the tolerance and error when it's higher
             control.status =
               control.devTol > 0
                 ? "error"
@@ -145,85 +114,17 @@ function Parts() {
         })),
       }));
     };
-
+    //generate initial data
+    setParts(
+      generateParts(partsBase)
+    );
+    //every 10 seconds generates mockData
     const interval = setInterval(() => {
       setParts(
-        generateParts([
-          {
-            name: "Part A",
-            features: [
-              {
-                name: "Seam",
-                controls: [
-                  "X",
-                  "Y",
-                  "Z",
-                  "Length",
-                  "X",
-                  "Y",
-                  "Z",
-                  "Length",
-                  "X",
-                  "Y",
-                  "Z",
-                  "Length",
-                  "X",
-                  "Y",
-                  "Z",
-                  "Length",
-                  "X",
-                  "Y",
-                  "Z",
-                  "Length",
-                  "X",
-                  "Y",
-                  "Z",
-                  "Length",
-                ],
-              },
-              { name: "Slot", controls: ["X", "Y", "Z", "Diameter"] },
-              { name: "Hole", controls: ["X", "Y", "Z", "Diameter"] },
-            ],
-          },
-          {
-            name: "Part B",
-            features: [
-              {
-                name: "Seam",
-                controls: [
-                  "X",
-                  "Y",
-                  "Z",
-                  "Length",
-                  "X",
-                  "Y",
-                  "Z",
-                  "Length",
-                  "X",
-                  "Y",
-                  "Z",
-                  "Length",
-                  "X",
-                  "Y",
-                  "Z",
-                  "Length",
-                  "X",
-                  "Y",
-                  "Z",
-                  "Length",
-                  "X",
-                  "Y",
-                  "Z",
-                  "Length",
-                ],
-              },
-              { name: "Slot", controls: ["X", "Y", "Z", "Diameter"] },
-              { name: "Hole", controls: ["X", "Y", "Z", "Diameter"] },
-            ],
-          },
-        ])
+        generateParts(partsBase)
       );
     }, 10000);
+    //clear interval on unmount
     return () => clearInterval(interval);
   }, []);
 
