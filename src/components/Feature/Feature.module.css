@@ -1,0 +1,9 @@
+.ok{
+    background-color: green;
+}
+.warning{
+    background-color: yellow;
+}
+.error{
+    background-color:red;
+}

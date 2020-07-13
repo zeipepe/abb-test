@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Part.module.css'
+import Feature from '../Feature/Feature'
 function Part(props){
     
     return <div className={styles.part}>
-        <h1>Part A</h1>
+        <h2>{props.name}</h2>
+        {props.features.map((feature,index)=>(
+            <Feature key={"feat-"+props.name+"-"+index} {...feature}/>
+        ))}
     </div>
 }
 
@@ -12,9 +16,8 @@ function Part(props){
 Part.propTypes = {
     name: PropTypes.string.isRequired,
     features: PropTypes.arrayOf(PropTypes.shape({
-        control: PropTypes.string,
-        dev: PropTypes.number,
-        devTol: PropTypes.number
+        name: PropTypes.string,
+        control: PropTypes.name
     })).isRequired
 }
 
