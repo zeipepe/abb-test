@@ -1,12 +1,13 @@
 .part h2{
     text-align: left;
-    margin: 20px;
+    margin: 15px;
     font-size: 25px;
 }
 .featuresContainer{
-    margin:20px;
+    margin:15px;
     display:grid;
     column-gap: 5px;
     row-gap: 7px;
-    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    grid-template-columns: repeat(auto-fit, 310px);
+    grid-auto-flow: dense;
 }

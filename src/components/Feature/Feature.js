@@ -65,7 +65,7 @@ function Feature(props) {
       return result;
     }
     setControlSections(chunkArray(controls, 12));
-  }, [controls.length]);
+  }, [controls]);
 
   const featureGridArea = {
     gridArea:
@@ -74,7 +74,7 @@ function Feature(props) {
       " / span " +
       controlSections.length,
   };
-  console.log(featureGridArea);
+  
   return (
     <div className={styles.featureContainer} style={featureGridArea}>
       <FeatureHeader status={featureState}>{name.toUpperCase()}</FeatureHeader>
@@ -112,7 +112,7 @@ function Feature(props) {
 Feature.propTypes = {
   name: PropTypes.string.isRequired,
   controls: PropTypes.arrayOf(
-    PropTypes.shape({
+    PropTypes.exact({
       name: PropTypes.string,
       dev: PropTypes.number,
       devTol: PropTypes.number,

@@ -38,8 +38,8 @@ function Parts() {
         {
           name: "Feature's Name",
           controls: [
-            { name: "X", dev: 0, devTol: 0, status: "ok" },
-            { name: "Y", dev: 0, devTol: 0, status: "warning" },
+            { name: "X", dev: 0,status: "ok" },
+            { name: "Y", dev: 0, devTol: 0, status: "ok" },
             { name: "Z", dev: 0, devTol: 0, status: "ok" },
             { name: "Diameter", dev: 0, devTol: 0, status: "ok" },
           ],
@@ -93,6 +93,15 @@ function Parts() {
     {
       name: "Part A",
       features: [
+        {
+          name: "Feature Name",
+          controls: [
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+            { name: "control", dev: 0, devTol: 0, status: "warning" },
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+            { name: "control", dev: 0, devTol: 0, status: "ok" },
+          ],
+        },
         {
           name: "Feature Name",
           controls: [
