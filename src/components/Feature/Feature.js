@@ -8,6 +8,11 @@ import {
   BsCheckCircle,
 } from "react-icons/bs";
 import styles from "./Feature.module.css";
+const colors={
+    ok:"#329a5d",
+  warning: "#e9c704",
+  error: "#f62d3d"
+  }
 
 function FeatureHeader(props) {
   return (
@@ -23,16 +28,15 @@ function FeatureHeader(props) {
   );
 }
 
-function iconFromStatus(status) {
-  let size="25px";
+function iconFromStatus(status,size = "25px", color=false) {
   switch (status) {
     case "error":
-      return <BsXCircle  size={size} />;
+      return <BsXCircle  size={size} color={color?colors[status]:'white'} />;
     case "warning":
-      return <BsXCircle size={size} />;
+      return <BsXCircle size={size} color={color?colors[status]:'white'} />;
     case "ok":
     default:
-      return <BsXCircle  size={size} />;
+      return <BsXCircle  size={size} color={color?colors[status]:'white'} />;
   }
 }
 
@@ -91,7 +95,7 @@ function Feature(props) {
                       <td>{control.name}</td>
                       <td>{control.dev}</td>
                       <td>{control.devTol}</td>
-                      <td>{control.status}</td>
+                      <td>{iconFromStatus(control.status,"15px",true)}</td>
                   </tr>
                   ))}
           </table>
