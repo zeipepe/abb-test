@@ -35,7 +35,7 @@ function Parts() {
   useEffect(() => {
     //Define function inside the effect to avoid issues with dependencies
       socket.on('parts', (parts) => {
-        console.log("parts from socket",parts)
+        //console.log("parts from socket",parts)
         setParts(parts)
       })
   }, []);
