@@ -10,7 +10,6 @@ function App() {
         <Link to="/">Parts</Link>
         <Link to="/About">About</Link>
       </nav>
-
       <Switch>
           <Route path="/about" component={About}/>
           <Route path="/" component={Parts} />
