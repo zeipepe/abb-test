@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import Part from "../../components/Part/Part";
 import styles from "./Parts.module.css";
 function Parts() {
-
+  useEffect(()=>{
+    document.title="Parts";   
+   },[])
   const [parts, setParts] = useState([]);
   useEffect(() => {
     //Define constants inside the effect to avoid issues with dependencies
