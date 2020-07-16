@@ -25,13 +25,22 @@ Given the objective and the requirements I decided to bootstrap the application 
 
 to run it in development 
 in the root directory run 
-> npm install 
-> npm start
-in a different command line
-> cd client
-> yarn install
-> yarn start
 
+```shell
+ npm install 
+
+ npm start
+```
+
+in a different command line
+
+```shell
+ cd client
+
+ yarn install
+
+ yarn start
+```
 
 
 
