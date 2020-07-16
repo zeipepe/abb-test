@@ -18,9 +18,19 @@ Given the objective and the requirements I decided to bootstrap the application 
 - [ ] Add tests for back end API
 - [X] Add sockets for refreshing the data
 - [X] Set up communication with back end
+- [ ] Set up deployment
 - [ ] Add drag and drop functionality
 
+# Set up
 
+to run it in development 
+in the root directory run 
+> npm install 
+> npm start
+in a different command line
+> cd client
+> yarn install
+> yarn start
 
 
 
