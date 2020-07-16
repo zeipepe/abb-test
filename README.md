@@ -12,15 +12,20 @@ Given the objective and the requirements I decided to bootstrap the application 
 - [X] Add tests for component's logic
 - [X] Add component logic
 - [X] Create a custom View
-- [ ] Add routing
-- [ ] Set up an express server as back end
+- [X] Add routing
+- [X] Set up an express server as back end
 - [ ] Add tests for communication with server
 - [ ] Add tests for back end API
-- [ ] Set up communication with back end
+- [X] Add sockets for refreshing the data
+- [X] Set up communication with back end
 - [ ] Add drag and drop functionality
 
 
-From here on is the CRA readme with available commands
+
+
+
+
+From here on is the CRA readme with available commands(to be run from /client)
 ----------------------------------------------------
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
